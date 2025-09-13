@@ -68,7 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-list"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">CATEGORIAS</span>
@@ -87,11 +87,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+                                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users"></i></span>
 
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Likes</span>
-                                    <span class="info-box-number">41,410</span>
+                                    <span class="info-box-text">USUARIOS</span>
+                                    <span class="info-box-number">
+                                        <?php
+                                        require_once '../controladores/homeController.php';
+                                        $respuesta = homeController::countUsuarios();
+                                        echo $respuesta['total'];
+                                        ?>
+                                    </span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -104,11 +110,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-plus"></i></span>
 
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Sales</span>
-                                    <span class="info-box-number">760</span>
+                                    <span class="info-box-text">POSTS</span>
+                                    <span class="info-box-number">
+                                        <?php
+                                        require_once '../controladores/homeController.php';
+                                        $respuesta = homeController::countPosteos();
+                                        echo $respuesta['total'];
+                                        ?>
+                                    </span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
