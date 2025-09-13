@@ -46,7 +46,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="categorias.php" class="nav-link">
-                                <i class="fa-solid fa-list"></i>
+                                <i class="fas fa-list"></i>
                                 <p>
                                     Categorías
                                 </p>
@@ -54,9 +54,17 @@
                         </li>
                         <li class="nav-item">
                             <a href="usuarios.php" class="nav-link">
-                                <i class="fa-solid fa-users"></i>
+                                <i class="fas fa-users"></i>
                                 <p>
                                     Usuarios
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="posteos.php" class="nav-link">
+                                <i class="fas fa-plus"></i>
+                                <p>
+                                    Posts
                                 </p>
                             </a>
                         </li>
