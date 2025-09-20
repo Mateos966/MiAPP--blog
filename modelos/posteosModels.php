@@ -19,17 +19,17 @@ class posteosModels extends Conexion
     }
 
     //INSERT
-    public static function insert($autor, $categoria, $titulo, $descripcion, $fecha)
+    public static function insert($imagen, $autor, $categoria, $titulo, $descripcion, $fecha)
     {
         $conexion = self::sql();
-        return $conexion->query("INSERT INTO `posteos`(`autor`, `categoria`, `titulo`, `descripcion`, `estado`, `fecha`) VALUES ('$autor', '$categoria', '$titulo', '$descripcion', 1, '$fecha')");
+        return $conexion->query("INSERT INTO `posteos`(`Imagen`, `autor`, `categoria`, `titulo`, `descripcion`, `estado`, `fecha`) VALUES ('$imagen', '$autor', '$categoria', '$titulo', '$descripcion', 1, '$fecha')");
     }
 
     //UPDATE
-    public static function update($id, $categoria, $titulo, $descripcion, $estado)
+    public static function update($id, $imagen, $categoria, $titulo, $descripcion, $estado)
     {
         $conexion = self::sql();
-        return $conexion->query("UPDATE `posteos` SET `categoria`='$categoria', `titulo`='$titulo', `descripcion`='$descripcion', `estado`='$estado' WHERE id = $id");
+        return $conexion->query("UPDATE `posteos` SET `Imagen`='$imagen', `categoria`='$categoria', `titulo`='$titulo', `descripcion`='$descripcion', `estado`='$estado' WHERE id = $id");
     }
 
     //SELECT ID

@@ -67,25 +67,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="d-flex justify-content-center">
 
                         <div class="col-8">
-                            <form action="posteoEditarEn.php" method="post">
-                                <?php 
+                            <form action="posteoEditarEn.php" method="post" enctype="multipart/form-data">
+                                <?php
                                 require_once "../controladores/posteosController.php";
                                 $respuesta = posteosController::selectId($_GET['id']);
                                 ?>
 
-                                <input type="hidden" name="id" id="" class="form-control" value='<?=$respuesta ["id"] ?>'>
-                                
+                                <input type="hidden" name="id" id="" class="form-control" value='<?= $respuesta["id"] ?>'>
+                                <input type="hidden" name="imagen_actual" value="<?=$respuesta['Imagen']?>">
+
+                                <div class="form-group">
+                                    <label for="" class="form-label">Imagen actual</label><br>
+                                    <img src="/blog/vistas/dist/img/posteos/<?= $respuesta["Imagen"] ?>" style="width:60px;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Nueva imagen</label>
+                                    <input type="file" name="imagen" class="form-control">
+                                </div>
                                 <div class="form-group">
                                     <label for="" class="form-label">Categoria</label>
-                                    <input type="text" name="categoria" id="" class="form-control" value='<?=$respuesta ["categoria"] ?>'>
+                                    <input type="text" name="categoria" id="" class="form-control" value='<?= $respuesta["categoria"] ?>'>
                                 </div>
                                 <div class="form-group">
                                     <label for="" class="form-label">Titulo</label>
-                                    <input type="text" name="titulo" id="" class="form-control" value='<?=$respuesta ["titulo"] ?>'>
+                                    <input type="text" name="titulo" id="" class="form-control" value='<?= $respuesta["titulo"] ?>'>
                                 </div>
                                 <div class="form-group">
                                     <label for="" class="form-label">Descripcion</label>
-                                    <input type="text" name="descripcion" id="" class="form-control" value='<?=$respuesta ["descripcion"] ?>'>
+                                    <input type="text" name="descripcion" id="" class="form-control" value='<?= $respuesta["descripcion"] ?>'>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Estado</label>

@@ -11,16 +11,16 @@ class posteosController
     }
 
     //INSERT
-    public function insert($autor, $categoria, $titulo, $descripcion, $fecha)
+    public function insert($imagen, $autor, $categoria, $titulo, $descripcion, $fecha)
     {
-        $stmt = posteosModels::insert($autor, $categoria, $titulo, $descripcion, $fecha);
+        $stmt = posteosModels::insert($imagen, $autor, $categoria, $titulo, $descripcion, $fecha);
         header('location:posteos.php?respuesta=ok');
     }
 
     //UPDATE
-    public function update($id, $categoria, $titulo, $descripcion, $estado)
+    public function update($id, $imagen, $categoria, $titulo, $descripcion, $estado)
     {
-        posteosModels::update($id, $categoria, $titulo, $descripcion, $estado);
+        posteosModels::update($id, $imagen, $categoria, $titulo, $descripcion, $estado);
         header('location:posteos.php?respuesta=ok');
     }
 

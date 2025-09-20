@@ -98,7 +98,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     ?>
                                         <tr class="">
                                             <td scope="row">
-                                                <img src="dist/img/posteos/<?php echo $value['imagen'] ?>" alt="Imagen del post" style="width:80px; height:auto;">
+                                                <img src="dist/img/posteos/<?php echo $value['Imagen'] ?>" alt="Imagen del post" style="width:60px; height:auto;">
                                             </td>
                                             <td scope="row"><?php echo $value['autor'] ?></td>
                                             <td scope="row"><?php echo $value['categoria'] ?></td>
