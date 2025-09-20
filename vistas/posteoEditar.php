@@ -74,11 +74,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 ?>
 
                                 <input type="hidden" name="id" id="" class="form-control" value='<?= $respuesta["id"] ?>'>
-                                <input type="hidden" name="imagen_actual" value="<?=$respuesta['Imagen']?>">
+                                <input type="hidden" name="imagen_actual" value="<?=$respuesta['imagen']?>">
 
                                 <div class="form-group">
                                     <label for="" class="form-label">Imagen actual</label><br>
-                                    <img src="/blog/vistas/dist/img/posteos/<?= $respuesta["Imagen"] ?>" style="width:60px;">
+                                    <img src="/blog/vistas/dist/img/posteos/<?= $respuesta["imagen"] ?>" style="width:60px;">
                                 </div>
                                 <div class="form-group">
                                     <label for="" class="form-label">Nueva imagen</label>

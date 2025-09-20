@@ -1,14 +1,14 @@
 <?php
 require_once '../controladores/posteosController.php';
 
-if (isset($_FILES['Imagen']) && $_FILES['Imagen']['error'] == 0) {
-    $imagen = $_FILES['Imagen']['name'];
+if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {
+    $imagen = $_FILES['imagen']['name'];
     $rutaDestino = __DIR__ . "/dist/img/posteos/" . $imagen;
     echo "<pre>";
-    print_r($_FILES['Imagen']);
+    print_r($_FILES['imagen']);
     echo "Ruta destino: $rutaDestino";
     echo "</pre>";
-    if (!move_uploaded_file($_FILES['Imagen']['tmp_name'], $rutaDestino)) {
+    if (!move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaDestino)) {
         echo "Error al mover el archivo.";
     }
 } else {

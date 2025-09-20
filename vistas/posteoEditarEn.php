@@ -7,10 +7,10 @@ error_reporting(E_ALL);
 require_once "../controladores/posteosController.php";
 
 // Procesar imagen
-if (isset($_FILES['Imagen']) && $_FILES['Imagen']['error'] == 0) {
-    $imagen = $_FILES['Imagen']['name'];
+if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {
+    $imagen = $_FILES['imagen']['name'];
     $rutaDestino = __DIR__ . "/dist/img/posteos/" . $imagen;
-    move_uploaded_file($_FILES['Imagen']['tmp_name'], $rutaDestino);
+    move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaDestino);
 } else {
     // Si no se sube nueva imagen, mantener la actual
     $imagen = $_POST['imagen_actual'];
