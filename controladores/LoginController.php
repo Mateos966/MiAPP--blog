@@ -13,7 +13,7 @@ class LoginController
         if ($respuesta  && $respuesta['password'] == $password) {
 
             session_start();
-            $_SESSION['usuario'] = $respuesta['email'];
+            $_SESSION['usuario'] = $respuesta;
 
             header('location:home.php');
         } else {

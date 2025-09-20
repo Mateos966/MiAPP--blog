@@ -14,7 +14,7 @@
                         <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Mateo Osorio</a>
+                        <a href="#" class="d-block"><?php echo $_SESSION['usuario']['nombre']?></a>
                     </div>
                 </div>
 
@@ -52,6 +52,9 @@
                                 </p>
                             </a>
                         </li>
+                        <?php
+                        if ($_SESSION['usuario']['rol']== 1): 
+                        ?>
                         <li class="nav-item">
                             <a href="usuarios.php" class="nav-link">
                                 <i class="fas fa-users"></i>
@@ -60,6 +63,7 @@
                                 </p>
                             </a>
                         </li>
+                        <?php endif ?>
                         <li class="nav-item">
                             <a href="posteos.php" class="nav-link">
                                 <i class="fas fa-plus"></i>
