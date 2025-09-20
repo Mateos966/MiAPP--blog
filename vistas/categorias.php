@@ -3,6 +3,9 @@ session_start();
 if (!isset($_SESSION['usuario'])) {
     header('location:../index.php');
 }
+if ($_SESSION['usuario']['rol'] != 1) {
+    header('location:home.php');
+}
 ?>
 
 <!DOCTYPE html>
