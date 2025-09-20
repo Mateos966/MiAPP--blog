@@ -77,9 +77,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div
                             class="table-responsive">
                             <table
-                                class="table table-primary">
+                                class="table table-dark">
                                 <thead>
                                     <tr>
+                                        <th scope="col">IMAGEN</th>
                                         <th scope="col">AUTOR</th>
                                         <th scope="col">CATEGORIA</th>
                                         <th scope="col">TITULO</th>
@@ -96,6 +97,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     foreach ($respuesta as $key => $value) :
                                     ?>
                                         <tr class="">
+                                            <td scope="row">
+                                                <img src="dist/img/posteos/<?php echo $value['imagen'] ?>" alt="Imagen del post" style="width:80px; height:auto;">
+                                            </td>
                                             <td scope="row"><?php echo $value['autor'] ?></td>
                                             <td scope="row"><?php echo $value['categoria'] ?></td>
                                             <td scope="row"><?php echo $value['titulo'] ?></td>
@@ -169,7 +173,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="posteoAgregar.php" method="post">
+                    <form action="posteoAgregar.php" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Imagen:</label>
+                            <input type="file" class="form-control" id="imagen" name="imagen">
+                        </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Autor:</label>
                             <input type="text" class="form-control" id="autor" name="autor">
