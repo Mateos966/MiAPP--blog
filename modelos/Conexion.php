@@ -1,5 +1,9 @@
 <?php
 
+namespace model;
+
+use mysqli;
+
 class Conexion
 {
     //SQL

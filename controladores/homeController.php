@@ -1,7 +1,13 @@
 <?php
+namespace controller;
+
 require_once "../modelos/categoriasModels.php";
 require_once "../modelos/usuariosModels.php";
 require_once "../modelos/posteosModels.php";
+
+use model\categoriasModels;
+use model\usuariosModels;
+use model\posteosModels;
 
 class homeController
 {

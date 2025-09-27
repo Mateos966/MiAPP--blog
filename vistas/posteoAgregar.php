@@ -1,4 +1,5 @@
 <?php
+use controller\posteosController;
 require_once '../controladores/posteosController.php';
 
 if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {

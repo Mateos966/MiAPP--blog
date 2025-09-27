@@ -1,5 +1,7 @@
 <?php
+namespace model;
 require_once "Conexion.php";
+use model\Conexion;
 class usuariosModels extends Conexion
 {
 

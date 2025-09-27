@@ -1,5 +1,8 @@
 <?php
+namespace controller;
 require_once '../modelos/LoginModel.php';
+
+use model\LoginModel;
 
 class LoginController
 {

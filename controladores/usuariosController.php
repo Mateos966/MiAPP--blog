@@ -1,5 +1,7 @@
 <?php
+namespace controller;
 require_once "../modelos/usuariosModels.php";
+use model\usuariosModels;
 class usuariosController
 {
 

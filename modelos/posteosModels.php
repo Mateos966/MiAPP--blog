@@ -1,7 +1,11 @@
 <?php
+namespace model;
+
 require_once "Conexion.php";
-class posteosModels extends Conexion
-{
+
+use model\Conexion;
+
+class posteosModels extends Conexion {
 
     //COUNT
     public static function count()

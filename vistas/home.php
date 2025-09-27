@@ -1,4 +1,6 @@
 <?php
+use controller\homeController;
+
 session_start();
 if (!isset($_SESSION['usuario'])) {
     header('location:../index.php');

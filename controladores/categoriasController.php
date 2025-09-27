@@ -1,5 +1,7 @@
 <?php
+namespace controller;
 require_once "../modelos/categoriasModels.php";
+use model\categoriasModels;
 class categoriasController
 {
 

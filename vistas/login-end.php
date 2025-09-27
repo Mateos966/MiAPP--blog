@@ -1,6 +1,8 @@
 <?php
 require_once '../controladores/LoginController.php';
 
+use controller\LoginController;
+
 if (empty($_POST['email'])  || empty($_POST['password'])) {
 
     header('location:../index.php');

@@ -1,4 +1,5 @@
 <?php
+use controller\posteosController;
 session_start();
 if (!isset($_SESSION['usuario'])) {
     header('location:../index.php');

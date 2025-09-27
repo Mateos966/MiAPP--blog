@@ -1,5 +1,10 @@
 <?php
+
+namespace controller;
 require_once "../modelos/posteosModels.php";
+
+use model\posteosModels;
+
 class posteosController
 {
 
